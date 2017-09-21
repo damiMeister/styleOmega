@@ -12,6 +12,7 @@ import android.widget.Toast;
 import com.example.damithajeanando.styleomega.R;
 import com.example.damithajeanando.styleomega.activities.model.User;
 import com.example.damithajeanando.styleomega.activities.database.dbHelper;
+import com.example.damithajeanando.styleomega.activities.validateHelper.InputValidate;
 
 /**
  * Created by Damitha Jeanando on 9/18/2017.
@@ -51,7 +52,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         dbhelper = new dbHelper(this);
         u = new User();
 
-       // validate = new InputValidate(this);
+       validate = new InputValidate(this);
 
         register.setOnClickListener(this);
         loginLink.setOnClickListener(this);
@@ -73,19 +74,10 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             passwordstr = password.getText().toString().trim();
             confirmPasswordstr = confirmPassword.getText().toString().trim();
 
-            u.setName(namestr);
-            u.setEmail(emailstr);
-            u.setPassword(passwordstr);
-            dbhelper.userReg(u);
 
-            Toast.makeText(getApplicationContext(), "Successfully Registered!", Toast.LENGTH_LONG).show();
-
-            Intent intentRegister = new Intent(this, LoginActivity.class);
-            startActivity(intentRegister);
-
-           /* if (!validate.nameFieldEmpty(namestr)) {
+            if (!validate.nameFieldEmpty(namestr)) {
                 if (!validate.emailFieldEmpty(emailstr) && !dbhelper.userCheck(emailstr)) {
-                    if (!valid.passwordFieldEmpty(passwordstr)) {
+                    if (!validate.passwordFieldEmpty(passwordstr)) {
                         if (passwordstr.equals(confirmPasswordstr)) {
                             u.setName(namestr);
                             u.setEmail(emailstr);
@@ -117,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 Toast.makeText(getApplicationContext(), "Name field is empty!", Toast.LENGTH_LONG).show();
                 password.setText("");
                 confirmPassword.setText("");
-            } */
+            }
         } else if (v.getId() == R.id.linkLogin) {
             Intent intentLogin = new Intent(RegisterActivity.this, LoginActivity.class);
             RegisterActivity.this.startActivity(intentLogin);

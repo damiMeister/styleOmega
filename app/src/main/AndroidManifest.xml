@@ -17,8 +17,14 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.activities.RegisterActivity" />
-        <activity android:name=".activities.activities.MainMenuActivity"></activity>
-        <activity android:name=".activities.activities.DisplayProductActivity"></activity>
+        <activity android:name=".activities.activities.MainMenuActivity" />
+        <activity android:name=".activities.activities.DisplayProductActivity" />
+        <activity android:name=".activities.activities.AddToCartActivity" />
+        <activity
+            android:name=".activities.activities.NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.activities.EditDetailsActivity"></activity>
     </application>
 
 </manifest>

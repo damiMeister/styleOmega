@@ -18,7 +18,7 @@ import java.util.List;
 
 public class MainMenuActivity extends AppCompatActivity {
 
-  //  TextView title;
+
     ListView listAllProducts;
     List<Product> products;
     dbHelper db;
@@ -30,7 +30,6 @@ public class MainMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_menu);
 
         listAllProducts = (ListView) findViewById(R.id.listAllProducts);
-       // title = (TextView) findViewById(R.id.title);
         products = new ArrayList<>();
         db = new dbHelper(this);
 

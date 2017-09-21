@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">styleOmega</string>
+    <string name="title_activity_navigation">Navigation</string>
+
+    <string name="Open_drawer">Open drawer</string>
+    <string name="Close_drawer">Close drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="navigation_drawer_items_array">
+        <item>Home</item>
+        <item>Men</item>
+        <item>Women</item>
+        <item>Kids</item>
+        <item>Accessories</item>
+    </string-array>
 </resources>
